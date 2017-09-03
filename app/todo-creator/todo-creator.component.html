@@ -1,0 +1,13 @@
+<!--<form [formGroup]="form">-->
+  <!--<input type="text"-->
+    <!--formControlName="todo"-->
+    <!--placeholder="{{ callToAction }}"-->
+    <!--(keyup.enter)="save()">-->
+<!--</form>-->
+
+<TextField #groceryTextField
+  col="1"
+  (loaded)="handleAndroidFocus(groceryTextField, container)"
+  [hint]="isAndroid ? 'ADD A GROCERY' : 'Add a grocery'"
+  returnKeyType="done"
+  (returnPress)="add('textfield')"></TextField>

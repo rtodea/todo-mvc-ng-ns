@@ -1,0 +1,3 @@
+<a *ngFor="let filter of filters" (click)="setFilter(filter)" [ngClass]="{'active': filter.isActive}" class="button">
+    {{ filter.label }}
+</a>

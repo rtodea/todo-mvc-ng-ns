@@ -1,0 +1,15 @@
+input {
+  font-size: 24;
+  width: 100%;
+  color: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  font-style: italic;
+  font-weight: 300;
+  color: #e6e6e6;
+}

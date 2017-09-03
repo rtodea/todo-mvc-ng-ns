@@ -1,0 +1,35 @@
+<!--<ul *ngIf="todos.length">-->
+  <!--<li *ngFor="let todo of todos">-->
+    <!--<div *ngIf="!isInEditMode(todo)" class="todo-item" tabindex="1">-->
+      <!--<input class="toggle"-->
+             <!--type="checkbox"-->
+             <!--(click)="toggleDone(todo)">-->
+      <!--<label [ngClass]="{done: todo.done}" class="todo-item__text"-->
+        <!--(dblclick)="setEditMode(todo)">-->
+        <!--{{ todo.text }}-->
+      <!--</label>-->
+      <!--<button class="destroy" (click)="destroy(todo)"></button>-->
+    <!--</div>-->
+    <!--<input *ngIf="isInEditMode(todo)" class="todo-input-text"-->
+      <!--(blur)="exitEditMode()" #todoText-->
+      <!--[value]="todo.text"-->
+      <!--(keyup.enter)="setText(todo, todoText.value)">-->
+  <!--</li>-->
+<!--</ul>-->
+
+<ListView [items]="todos" class="list-group">
+  <ng-template let-item="item">
+    <StackLayout
+      col="0"
+      orientation="horizontal"
+      class="tap-target"
+      (tap)="toggleDone(item)">
+      <!--<Image-->
+        <!--[src]="imageSource(item)"-->
+        <!--class="check-box"></Image>-->
+      <Label
+        [text]="item.text"
+        [class.line-through]="item.done"></Label>
+    </StackLayout>
+  </ng-template>
+</ListView>
