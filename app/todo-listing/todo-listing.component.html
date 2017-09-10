@@ -11,9 +11,18 @@
           class="check-box">
         </Image>
         <Label
+          *ngIf="!isInEditMode(item)"
           [text]="item.text"
           class="item"
           [class.line-through]="item.done"></Label>
+        <TextField
+          #textField
+          *ngIf="isInEditMode(item)"
+          class="input"
+          returnKeyType="done"
+          text="{{ item.value }}"
+          (returnPress)="setText(item, textField.value)">
+        </TextField>
       </StackLayout>
     </ng-template>
   </ListView>

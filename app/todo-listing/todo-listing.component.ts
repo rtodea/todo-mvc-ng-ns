@@ -24,14 +24,6 @@ export class TodoListingComponent implements OnInit, OnDestroy {
     this.subscriptions.push(this.todoService.filteredTodosObservable.subscribe((todos) => {
       this.todos = todos;
     }));
-
-    this.removeMeLoadDummyTodos()
-  }
-
-  removeMeLoadDummyTodos() {
-    // TODO: remove this
-    const todos = ['first', 'second', 'third'].map((todo) => (this.todoService.create(todo)));
-    this.todoService.load(todos);
   }
 
   ngOnDestroy() {
@@ -46,10 +38,15 @@ export class TodoListingComponent implements OnInit, OnDestroy {
   }
 
   isInEditMode(todo) {
+    if (!todo) {
+      return false;
+    }
     return todo.id === this.todoInEditMode;
   }
 
   setEditMode(todo) {
+    console.log('setEditMode');
+    console.dir(todo);
     this.todoInEditMode = todo.id;
   }
 
