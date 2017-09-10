@@ -22,22 +22,13 @@ export class TodoCreatorComponent implements OnInit {
     });
   }
 
-  create() {
+  save() {
     const todoText = this.form.controls.todo.value;
-
     this.todoService.create(todoText);
     this.form.reset();
   }
 
   destroy(todoId) {
     this.todoService.destroy(todoId);
-  }
-
-  handleAndroidFocus(textField, container) {
-    if (container.android) {
-      container.android.setFocusableInTouchMode(true);
-      container.android.setFocusable(true);
-      textField.android.clearFocus();
-    }
   }
 }

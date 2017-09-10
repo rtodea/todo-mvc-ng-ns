@@ -4,6 +4,7 @@
         col="0"
         orientation="horizontal"
         class="tap-target"
+        (longPress)="setEditMode(item)"
         (tap)="toggleDone(item)">
         <Image
           [src]="imageSource(item)"

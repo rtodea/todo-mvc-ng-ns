@@ -1,14 +1,9 @@
 .button {
-    cursor: pointer;
-}
-
-.button {
-  color: inherit;
-  margin: 3px;
-  padding: 3px 7px;
+  margin: 3;
+  padding: 3 7;
   text-decoration: none;
-  border: 1px solid transparent;
-  border-radius: 3px;
+  border: 1 solid transparent;
+  border-radius: 3;
 }
 
 .button.active {

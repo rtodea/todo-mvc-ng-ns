@@ -1,9 +1,21 @@
 <StackLayout class="container">
-  <Label horizontalAlignment="center" class="title" text="todos"></Label>
+  <Label
+    horizontalAlignment="center"
+    class="title"
+    text="todos"></Label>
   <StackLayout class="list">
+    <tdm-todo-creator></tdm-todo-creator>
     <tdm-todo-listing></tdm-todo-listing>
-    <StackLayout>
-      <tdm-todo-counter></tdm-todo-counter>
+    <StackLayout
+      class="footer"
+      orientation="horizontal"
+      horizontalAlignment="stretch">
+      <WrapLayout class="counter">
+        <tdm-todo-counter></tdm-todo-counter>
+      </WrapLayout>
+      <WrapLayout class="filter">
+        <tdm-todo-filter (filterUpdated)="setFilter($event)"></tdm-todo-filter>
+      </WrapLayout>
     </StackLayout>
   </StackLayout>
 </StackLayout>

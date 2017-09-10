@@ -110,6 +110,8 @@ export class TodoService {
     this.activeFilter = filter;
     this.filteredTodosSnapshot = this.getFilteredTodos(this.activeFilter);
     this.filteredTodos$.next(this.filteredTodosSnapshot);
+    console.log('setting filter:');
+    console.dir(this.filteredTodosSnapshot);
   }
 
   getFilter() {

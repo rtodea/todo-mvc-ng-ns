@@ -11,3 +11,16 @@
 .list {
   background-color: white;
 }
+
+.footer {
+  font-size: 14;
+}
+
+.counter {
+  margin-left: 15;
+  margin-right: 15;
+  padding: 3 7;
+}
+
+.filter {
+}

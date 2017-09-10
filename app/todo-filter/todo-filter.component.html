@@ -1,3 +1,7 @@
-<a *ngFor="let filter of filters" (click)="setFilter(filter)" [ngClass]="{'active': filter.isActive}" class="button">
-    {{ filter.label }}
-</a>
+<Label
+  *ngFor="let filter of filters"
+  (tap)="setFilter(filter)"
+  [ngClass]="{'active': filter.isActive}"
+  class="button"
+  text="{{ filter.label }}">
+</Label>

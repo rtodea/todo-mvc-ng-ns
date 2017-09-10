@@ -11,6 +11,8 @@ import { TodoService } from './todo.service';
 import { StoreService } from './store.service';
 import { TodoStoreService } from './todo-store.service';
 import { TodosComponent } from './todos/todos.component';
+import { NativeScriptFormsModule } from 'nativescript-angular';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -30,6 +32,8 @@ import { TodosComponent } from './todos/todos.component';
   imports: [
     NativeScriptModule,
     AppRoutingModule,
+    NativeScriptFormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     TodoService,
