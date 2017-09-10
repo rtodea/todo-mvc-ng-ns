@@ -15,7 +15,7 @@ export class TodoItem implements TodoItem {
   }
 
   private generateUniqueId() {
-    return new Date().getTime().toString();
+    return TodoService.guid();
   }
 }
 
@@ -47,6 +47,16 @@ export class TodoService {
   todosObservable = this.todos$.asObservable();
 
   filteredTodosObservable = this.filteredTodos$.asObservable();
+
+  public static guid() {
+    function s4() {
+      return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+      s4() + '-' + s4() + s4() + s4();
+  }
 
   private getFilteredTodos(filter: FilterType) {
     const filters = {

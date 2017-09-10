@@ -1,12 +1,12 @@
-import { NgModule } from "@angular/core";
-import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { Routes } from "@angular/router";
-import { TodoListingComponent } from './todo-listing/todo-listing.component';
+import { NgModule } from '@angular/core';
+import { NativeScriptRouterModule } from 'nativescript-angular/router';
+import { Routes } from '@angular/router';
+import { TodosComponent } from './todos/todos.component';
 
 
 const routes: Routes = [
-    { path: "", redirectTo: "/items", pathMatch: "full" },
-    { path: "items", component: TodoListingComponent },
+    { path: '', redirectTo: '/items', pathMatch: 'full' },
+    { path: 'items', component: TodosComponent },
 ];
 
 @NgModule({

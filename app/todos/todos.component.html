@@ -1,3 +1,9 @@
-<StackLayout>
-  <tdm-todo-listing></tdm-todo-listing>
+<StackLayout class="container">
+  <Label horizontalAlignment="center" class="title" text="todos"></Label>
+  <StackLayout class="list">
+    <tdm-todo-listing></tdm-todo-listing>
+    <StackLayout>
+      <tdm-todo-counter></tdm-todo-counter>
+    </StackLayout>
+  </StackLayout>
 </StackLayout>
