@@ -6,9 +6,23 @@
   font-size: 24;
   padding: 15 60 15 15;
 }
-
 .check-box {
   margin-left: 15;
   margin-right: 10;
   height: 20;
+}
+
+.delete {
+  height: 20;
+  width: 20;
+  background-color: darkred;
+  horizontalAlignment: right;
+}
+
+.item-container {
+  /* background-color: beige; */
+}
+
+.input {
+  width: 60;
 }

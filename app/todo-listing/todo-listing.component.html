@@ -5,24 +5,32 @@
         orientation="horizontal"
         class="tap-target"
         (longPress)="setEditMode(item)"
-        (tap)="toggleDone(item)">
+        class="item-container">
         <Image
           [src]="imageSource(item)"
+          (tap)="toggleDone(item)"
           class="check-box">
         </Image>
         <Label
           *ngIf="!isInEditMode(item)"
           [text]="item.text"
           class="item"
+          (tap)="setEditMode(item)"
           [class.line-through]="item.done"></Label>
         <TextField
           #textField
           *ngIf="isInEditMode(item)"
           class="input"
           returnKeyType="done"
+          (blur)="exitEditMode()"
           text="{{ item.value }}"
           (returnPress)="setText(item, textField.value)">
         </TextField>
+        <Image
+          class="delete"
+          horizontalAlignment="right"
+          (tap)="destroy(item)">
+        </Image>
       </StackLayout>
     </ng-template>
   </ListView>
