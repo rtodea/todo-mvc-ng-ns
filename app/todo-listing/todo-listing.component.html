@@ -23,8 +23,8 @@
           class="input"
           returnKeyType="done"
           (blur)="exitEditMode()"
-          text="{{ item.value }}"
-          (returnPress)="setText(item, textField.value)">
+          text="{{ item.text }}"
+          (returnPress)="setText(item, textField.text)">
         </TextField>
         <Image
           class="delete"
@@ -34,4 +34,3 @@
       </StackLayout>
     </ng-template>
   </ListView>
-
