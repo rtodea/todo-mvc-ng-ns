@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "328757221035",
+    "firebase_url": "https://todomvc-b1fbe.firebaseio.com",
+    "project_id": "todomvc-b1fbe",
+    "storage_bucket": "todomvc-b1fbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328757221035:android:6c972164d6041cff",
+        "android_client_info": {
+          "package_name": "org.nativescript.TodoMvcNsNg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328757221035-p6qecv98e7jmtj0hhkmgovlvpqc1aeei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBauKgPA9h0x2pZ8lElZhGDmY_5ole2unI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
