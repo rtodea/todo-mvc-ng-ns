@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
+import { Router } from "@angular/router";
 
 import { TodoItem, TodoService } from '../todo.service';
 
@@ -16,7 +17,8 @@ export class TodoListingComponent implements OnInit, OnDestroy {
 
   todos: TodoItem[] = [];
 
-  constructor(private todoService: TodoService) {
+  constructor(private todoService: TodoService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -65,5 +67,9 @@ export class TodoListingComponent implements OnInit, OnDestroy {
 
   imageSource(item) {
       return item.done ? "res://checked" : "res://unchecked";
+  }
+
+  goToDetails(todo) {
+    this.router.navigateByUrl(`/items/${todo.id}`);
   }
 }

@@ -2,6 +2,8 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
+import { NativeScriptFormsModule } from 'nativescript-angular';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { TodoCreatorComponent } from './todo-creator/todo-creator.component';
 import { TodoListingComponent } from './todo-listing/todo-listing.component';
@@ -11,8 +13,7 @@ import { TodoService } from './todo.service';
 import { StoreService } from './store.service';
 import { TodoStoreService } from './todo-store.service';
 import { TodosComponent } from './todos/todos.component';
-import { NativeScriptFormsModule } from 'nativescript-angular';
-import { ReactiveFormsModule } from '@angular/forms';
+import { TodoDetailsComponent } from './todo-details/todo-details.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TodoListingComponent,
     TodoCounterComponent,
     TodoFilterComponent,
-    TodosComponent
+    TodosComponent,
+    TodoDetailsComponent,
   ],
   imports: [
     NativeScriptModule,

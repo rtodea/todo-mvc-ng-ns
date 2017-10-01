@@ -106,6 +106,10 @@ export class TodoService {
     this.todos$.next(this.todosSnapshot);
   }
 
+  read(todoId: string) {
+    return this.todosById[todoId];
+  }
+
   setFilter(filter: FilterType) {
     this.activeFilter = filter;
     this.filteredTodosSnapshot = this.getFilteredTodos(this.activeFilter);
