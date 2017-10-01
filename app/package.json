@@ -4,5 +4,8 @@
   },
   "main": "main.js",
   "name": "tns-template-hello-world-ng",
-  "version": "3.1.2"
+  "version": "3.1.2",
+  "dependencies": {
+    "email-validator": "^1.1.1"
+  }
 }
