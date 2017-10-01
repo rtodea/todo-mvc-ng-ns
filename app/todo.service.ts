@@ -107,7 +107,7 @@ export class TodoService {
   }
 
   read(todoId: string) {
-    return this.todosById[todoId];
+    return this.todosById.get(todoId);
   }
 
   setFilter(filter: FilterType) {

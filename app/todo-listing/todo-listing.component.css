@@ -24,6 +24,7 @@
   width: 20;
   background-color: limegreen;
   horizontalAlignment: right;
+  margin-left: 15;
 }
 
 .item-container {

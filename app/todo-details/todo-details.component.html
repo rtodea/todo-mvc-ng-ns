@@ -1,3 +1,11 @@
-<WrapLayout>
-  <TextView text="Details for todo"></TextView>
-</WrapLayout>
+<Label *ngIf="!todo" text="Loading..."></Label>
+<StackLayout *ngIf="todo">
+  <Label text="Details for todo {{ todo.id }}:"></Label>
+  <Label text="Message:"></Label>
+  <Label text="{{ todo.text }}"></Label>
+  <Image [src]="picture"></Image>
+  <Button (tap)="attachPicture()" text="Attach Picture"></Button>
+  <Button (tap)="takePicture()" text="Take Picture"></Button>
+  <Button text="Edit Message"></Button>
+  <Button text="Delete"></Button>
+</StackLayout>
