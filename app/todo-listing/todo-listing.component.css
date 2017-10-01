@@ -19,6 +19,13 @@
   horizontalAlignment: right;
 }
 
+.details {
+  height: 20;
+  width: 20;
+  background-color: limegreen;
+  horizontalAlignment: right;
+}
+
 .item-container {
   /* background-color: beige; */
 }

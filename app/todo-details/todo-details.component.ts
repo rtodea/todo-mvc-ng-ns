@@ -5,7 +5,7 @@ import { ActivatedRoute } from "@angular/router";
 import { TodoItem, TodoService } from '../todo.service';
 
 @Component({
-  selector: 'tdm-todo-listing',
+  selector: 'tdm-todo-details',
   moduleId: module.id,
   templateUrl: './todo-details.component.html',
   styleUrls: ['./todo-details.component.css']
